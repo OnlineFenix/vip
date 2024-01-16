@@ -120,11 +120,12 @@
        margin: 2px 1px;
      }
      .about-btn {
+       width:90vw;
+       margin-bottom:0px;
        background-color: yellow;
        display: flex;
        justify-content: center;
        text-align: center;
-       margin: 0.1px;
        padding: 2px;
        list-style: none;
 
@@ -135,10 +136,12 @@
        
      }
     .about {
-      color: black;
-      font-size: 13.2px;
-      margin: 2px 4px;
-      padding: 0.5px 15px;
+      color: #FA0000;
+      width:20vw;
+      text-shadow:0.2px 0.2px 1px yellow;
+      font-size: 11.2px;
+      margin: 2px 2px;
+      padding: 0.5px 1px;
       background-color: #8CE58C;
       display: flex;
       text-align: center;
@@ -149,6 +152,32 @@
     .title-flow {
       text-align: center;
     }
+     #refresh {
+       position
+       width:22px;
+       height:22px;
+     }
+     #refresh:hover {
+       background-color:lightgreen;
+     }
+     .refresh-div {
+       border-radius: 2px;
+       background-color: white;
+       border: 1px double black;
+       position:fixed;
+       top:0.2;
+       right:3;
+       height:22px;
+       width:22px;
+       
+     }
+     .division {
+       display: flex;
+       flex-direction: row;
+       width:90vw;
+       display: inline;
+       padding:0px;
+     }
      .bg-mg {
        background: linear-gradient(to right, #BF9F52, #4FA988);
        border: 1px dotted red;
@@ -336,13 +365,18 @@
    </style>
    <body>
      <header class="head-1">
+       <div class="division">
           <ul class="about-btn">
-             <li class="about">CHART</li>
-             <li class="about">FAQ</li>
-             <li class="about">ABOUT</li>
-             <li class="about">  RESULT-TIME  </li>
-
+             <li class="about" id="divine1" onclick="runner()">CHART</li>
+             <li class="about" id="divine2" onclick="ultimate()">FAQ</li>
+             <li class="about" id="divine3" onclick="information ()">ABOUT</li>
+             <li class="about" id="divine4">RESULT-TIME</li>
           </ul>
+       <div class="refresh-div">
+          <img id="refresh", onclick="page ()" src="refresh.svg" />
+       </div>
+       </div>
+       
        <hr />
 
        <div class="divi-1">
@@ -353,12 +387,12 @@
        <hr />
           <div class="bg-mg"> 
      <p class="main-result">⟹Satta King Live Result Today⟸</p> 
+     <p class="livegame">DESAWAR</p>
+     <p class="liveresult">〔 wait 〕</p>
      <p class="livegame">GALI</p>
-     <p class="liveresult">〔 51 〕</p>
+     <p class="liveresult">〔 51 〕</p> 
      <p class="livegame">GAZIABAD</p>
      <p class="liveresult">〔 60 〕</p> 
-     <p class="livegame">FIROZABAD</p>
-     <p class="liveresult">〔 44 〕</p> 
     </div> 
 
      </header>
@@ -1014,6 +1048,18 @@ Satta is a game of luck. No player can control the game's destiny, and every pla
       text-shadow: 0.8px 0.8px 1px black;
 
     }
+    .game3:hover {
+      text-align:center;
+      text-decoration: none;
+      border: 5px double green;
+      background-color:yellow;
+      color:red;
+      font-weight:bold;
+      font-size:30px;
+      text-shadow:0.5px 0.5px 0.5px black;
+      padding:4px;
+      border-radius:5px;
+    }
     .game3 {
       border: 1px solid blue;
       border-radius: 25px;
@@ -1026,6 +1072,11 @@ Satta is a game of luck. No player can control the game's destiny, and every pla
 
       text-decoration: underline;
     }
+    .game4:active {
+      color:white;
+      background-color:black;
+      text-shadow:1px 1px 1px red;
+    }
     .game4 {
       color: black;
       background-color: white;
@@ -1035,73 +1086,103 @@ Satta is a game of luck. No player can control the game's destiny, and every pla
       margin: 3px;
       padding: 2px;
       font-size: 18px;
-      text-shadow: 1px 01px red;
+      text-shadow: 1px 01px yellow;
+    }
+    .game5:active {
+      color:white;
+      background-color:black;
+      text-shadow:1px 1px 1px red;
     }
     .game5 {
       color: black;
-      background-color: #F9D502;
+      background-color: white;
       border: 0.5px solid black;
       border-radius: 3px;
       box-shadow: 0.5px 0.5px 1px black;
       margin: 3px;
       padding: 2px;
       font-size: 18px;
-      text-shadow: 1px 1px red;
+      text-shadow: 1px 1px yellow;
+    }
+    .game6:active {
+      color:white;
+      background-color:black;
+      text-shadow:1px 1px 1px red;
     }
     .game6 {
       color: black;
-      background-color: #F9D502;
+      background-color: white;
       border: 0.5px solid black;
       border-radius: 3px;
       box-shadow: 0.5px 0.5px 1px black;
       margin: 3px;
       padding: 2px;
       font-size: 18px;
-      text-shadow: 1px 1px red;
+      text-shadow: 1px 1px yellow;
+    }
+    .game7:active {
+      color:white;
+      background-color:black;
+      text-shadow:1px 1px 1px red;
     }
     .game7 {
       color: black;
-      background-color: #F9D502;
+      background-color: white;
       border: 0.5px solid black;
       border-radius: 3px;
       box-shadow: 0.5px 0.5px 1px black;
       margin: 3px;
       padding: 2px;
       font-size: 18px;
-      text-shadow: 1px 1px red;
+      text-shadow: 1px 1px yellow;
+    }
+    .game8:active {
+      color:white;
+      background-color:black;
+      text-shadow:1px 1px 1px red;
     }
     .game8 {
       color: black;
-      background-color: #F9D502;
+      background-color: white;
       border: 0.5px solid black;
       border-radius: 3px;
       box-shadow: 0.5px 0.5px 1px black;
       margin: 3px;
       padding: 2px;
       font-size: 18px;
-      text-shadow: 1px 1px red;
+      text-shadow: 1px 1px yellow;
+    } 
+    .game9:active {
+      color:white;
+      background-color:black;
+      text-shadow:1px 1px 1px red;
     }
     .game9 {
       color: black;
-      background-color: #F9D502;
+      background-color: white;
       border: 0.5px solid black;
       border-radius: 3px;
       box-shadow: 0.5px 0.5px 1px black;
       margin: 3px;
       padding: 2px;
       font-size: 18px;
-      text-shadow: 01px 01px red;
+      text-shadow: 1px 1px yellow;
       }
+    .game10:active {
+      color:white;
+      background-color:black;
+      text-shadow:1px 1px 1px red;
+    }
     .game10 {
       color: black;
-      background-color: #F9D502;
+      background-color: white;
       border: 0.5px solid black;
       border-radius: 3px;
-      box-shadow: 0.5px 0.5px 1px black;
+      box-shadow: 0.5px 0.5px 3px black;
       margin: 3px;
       padding: 2px;
       font-size: 18px;
-      text-shadow: 01px 01px red;
+      text-shadow: 1px 1px yellow;
     }
     .youth {
       display:inline-block;
@@ -1309,8 +1390,28 @@ Satta is a game of luck. No player can control the game's destiny, and every pla
       window.location="y207.html";
     }
 
+    function page() {
+      document.getElementById("refresh");
+      window.location="https://vip-satta-result.com";
+    }
+    function information() {
+      document.getElementById("divine3");
+      window.location ="about-admin.html";
+      
+    }
+   function runner() {
+     document.getElementById("divine1");
+   window.scrollBy(0,700);
+     
+   }
+    function ultimate() {
+      document.getElementById("divine2");
+      window.location ="faq.html";
+    }
+    
+
 
     
       </script>
 
-</html>
+   </html>
