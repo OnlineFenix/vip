@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>VIP-SATTA-RESULTS</title>
+  <style>
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin: 0px;
+      padding: 0px;
+      text-align: center;
+    }
+    body {
+      background-color: ghostwhite;
+      font-family: serif;
+    }
+    .box {
+      padding: 50px;
+      height: 100vh;
+      width: 100vw;
+      border: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .heading {
+      color: black;
+      text-shadow: 0px 0px 2px springgreen;
+      margin-bottom: 40px;
+    }
+    .login {
+      border: 0.1px springgreen;
+      padding: 5px 20px;
+      border-radius: 5px;
+      background-color: white;
+      font-family: monospace;
+      transition: all 0.2s ease;
+      
+    }
+    .login:hover {
+      background-color: springgreen;
+      color: white;
+      text-shadow: 0px 0px 1px black;
+      font-weight: bold;
+    }
+    .cross, .img {
+      width: 20px;
+      height: 20px;
+    }
+    .name, .pass {
+      color: black;
+      padding: 5px 0px;
+      border: 0.5px solid black;
+      font-family: cursive;
+    }
+    .error {
+      color: #FF1F1F;
+      font-size: 8px;
+      font-family: sans-serif;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h3 class="heading">ACCESS DENIED!</h3>
+    <p class="error" id="err">Incorrect username or password!</p>
+    <input type="text" class="name" placeholder="Username">
+    <input type="password" class="pass" placeholder="Password">
+    <button class="login" id="login">Login</button>
+    <span onclick="exitPage()" class="cross"><img src="cr.svg" alt="close" class="img" onclick="exitPage()"></span>
+  </div>
+  <script>
+    function exitPage() {
+  window.close(); // Close the current tab
+  window.open('', '_self').close(); // Close the window
+}
+
+
+// function loginPage() {
+//   let a = document.getElementById("err")
+  
+
+//   if(a.style.display="none"){
+//     a.style.display = "block";
+//   }
+//   else{
+//     pass
+//   }
+// }
+
+// setTimeout(function(){
+//     document.getElementById("err").style.display = "none";
+//   }, 3000);
+
+
+document.getElementById("login").addEventListener("click", function() {
+    var heading = document.getElementById("err");
+    if (heading.style.display === "none") {
+      heading.style.display = "block";
+    } else {
+      heading.style.display = "none";
+    }
+    setTimeout(function(){
+      heading.style.display = "none";
+    }, 3000); // 3000 milliseconds = 3 seconds
+  });
+  </script>
+</body>
+</html>
